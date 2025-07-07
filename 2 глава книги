@@ -1,0 +1,44 @@
+#include <iostream>
+#include <string>
+#include <utility>
+#include <vector>
+//Задаем директивы using для того, чтобы не писать std::...
+using std::cout;
+using std::endl;
+using std::cin;
+using std::string;
+
+int main() {
+    cout << "Difficulty Levels\n\n";
+    cout << "1 - Easy\n";
+    cout << "2 - Medium\n";
+    cout << "3 - Hard\n";
+    cout << "4 - Experimental\n\n";
+    int choice;
+    cout << "Enter your choice: ";
+    cin >> choice;
+    switch (choice) {
+        case 1:
+            cout << "Easy\n";
+            break;
+        case 2:
+            cout << "Medium\n";
+            break;
+        case 3:
+            cout << "Hard\n";
+            break;
+        case 4:
+            cout << "Experimental\n";
+            break;
+        default:
+            cout << "You made an illegal choice.\n";
+    }
+    //Исправленный код из книги
+    int x = 0;
+    while (!x) {
+        ++x;
+        cout << x << endl;
+    }
+    return 0;
+}
+
