@@ -24,15 +24,15 @@ int main() {
 
     do {
         cout << "Choice ho search number: \n";
-        cout << "1 - Player\n";
-        cout << "2 - Computer\n\n";
-        cout << "Choice ho play: ";
+        cout << " 1 - Player\n";
+        cout << " 2 - Computer\n";
+        cout << "Choice : ";
         cin >> choice;
         if (choice == 1) {
             randomNumber = rand() % 100 + 1;
             do {
                 ++choice;
-                cout << "Enter number: ";
+                cout << "Enter number : ";
                 cin >> numberPlayer;
 
                 if (numberPlayer > randomNumber) {
@@ -42,25 +42,30 @@ int main() {
                 }
 
             } while (numberPlayer != randomNumber);
-            cout << "Random number equals for your: " << numberPlayer << " Count search your number: " << choice << endl;
+            cout << "Random number equals for your : " << numberPlayer << " Count search your number : " << choice << endl;
 
         } else if (choice == 2) {
-            cout << "Enter number: ";
+            cout << "Enter number : ";
             cin >> numberPlayer;
             do {
                 ++choice;
                 randomNumber = rand() % 100 + 1;
             } while (randomNumber != numberPlayer);
-            cout << "Your number: " << randomNumber << " Count search your number: " << choice << endl;
+            cout << "Your number : " << randomNumber << " Count search your number : " << choice << endl;
+        } else {
+            continue;
         }
 
         cout << "Your play again:\n ";
-        cout << "Press enter to  '1 - continue' : '2 - break': ";
+        cout << " 1 - continue\n  2 - break\n";
+        cout << "Press enter key : ";
         cin >> numberPlayer;
 
         if (numberPlayer == 1) {
             continue;
         } else if (numberPlayer == 2) {
+            break;
+        } else {
             break;
         }
 
